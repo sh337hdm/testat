@@ -23,13 +23,17 @@ Umgang mit fehlenden Werten: Fehlende Werte werden nicht erfasst.
 
 # EDGE-Attribute
 **from**
+
 initiierender Knoten mit eindeutiger Kennung, lässt sich in *id* der Nodelist exakt wiederfinden
 
 **to**
+
 erhaltender Knoten mit eindeutiger Kennung, lässt sich in *id* der Nodelist exakt wiederfinden
 
 **relation**
+
 Beziehungsart zwischen den Knoten
+
 1=*Privater Kontakt*
 
 2=*(Ex-)Liebesbeziehung*
@@ -40,21 +44,25 @@ Beziehungsart zwischen den Knoten
 
 5=*Gründer*
 
-6=*Angestellte/r*
+6=*Angestellter*
 
 # NODE-Attribute
 **id**
+
 Identische ID wie aus der edgelist zur Identifikation der Knoten.
 
 **name**
+
 Numerische ID. 
 
 **type**
+
 1=*Person*
 
 2=*Organisation*
 
 **sector**
+
 1=*Wirtschaft*
 
 2=*Militär*
