@@ -1,32 +1,32 @@
 id,name,sector,type
-phr,"Heinrich Prinz Reuß",4,1
-mf,"Michael Fritsch",7,1
-fh,"Frank Heppner",8,1
-me,"Maximilian Eder",2,1
-cw,"Christian Wendler",3,1
-rhl,"Ruth Hildegard L.",3,1
-am,"Andreas M.",2,1
-rvp,"Ruediger von Pescatore",2,1
-tpg,"Tim Paul G.",6,1
-mvh,"Marco van H.",2,1
-mr,"Melanie R.",9,1
-pw,"Peter Woerner",2,1
-rr,"Rene R.",8,1
-bmw,"Birgit Malsack-Winkemann",3,1
-tt,"Thomas T.",1,1
-fr,"Frank Richter",3,1
-ig,"Ivonne G.",7,1
-aq,"Alexander Q.",3,1
-adel,"Adel",4,2
-polizei,"Polizei",7,2
-basis,"Partei Die Basis",3,2
-prominenz,"Prominenz",8,2
-ksk,"Kommando Spezialkräfte",2,2
-afd,"Partei AfD",3,2
-recht,"Justiz",6,2
-arzt,"Arzt",9,2
-musik,"Musik",8,2
-handwerk,"Handwerk",1,2
-cdu,"Partei CDU",3,2
-qd,"Querdenker",3,2
-qa,"QAnon",3,2
+phr,Heinrich Prinz Reuß,4,1
+mf,Michael Fritsch,7,1
+fh,Frank Heppner,8,1
+me,Maximilian Eder,2,1
+cw,Christian Wendler,3,1
+rhl,Ruth Hildegard L.,3,1
+am,Andreas M.,2,1
+rvp,Ruediger von Pescatore,2,1
+tpg,Tim Paul G.,6,1
+mvh,Marco van H.,2,1
+mr,Melanie R.,9,1
+pw,Peter Woerner,2,1
+rr,Rene R.,8,1
+bmw,Birgit Malsack-Winkemann,3,1
+tt,Thomas T.,1,1
+fr,Frank Richter,3,1
+ig,Ivonne G.,7,1
+aq,Alexander Q.,3,1
+adel,Adel,4,2
+polizei,Polizei,7,2
+basis,Partei Die Basis,3,2
+prominenz,Prominenz,8,2
+ksk,Kommando Spezialkräfte,2,2
+afd,Partei AfD,3,2
+recht,Justiz,6,2
+arzt,Arzt,9,2
+musik,Musik,8,2
+handwerk,Handwerk,1,2
+cdu,Partei CDU,3,2
+qd,Querdenker,3,2
+qa,QAnon,3,2
