@@ -15,7 +15,8 @@ Das Netzwerk ist ein gerichtetes two-mode Netzwerk.
 
 Es wurden folgende Aspekte untersucht: 
 
-Wer ist mit wem vernetzt? Und wie sind sie vernetzt? 
+Wer ist mit wem vernetzt? Wie sind sie vernetzt? 
+
 Welche gesellschaftlichen Sektoren sind daran beteiligt gewesen? 
 
 Umgang mit fehlenden Werten: Fehlende Werte werden nicht erfasst.
