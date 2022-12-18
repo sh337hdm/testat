@@ -30,11 +30,17 @@ erhaltender Knoten mit eindeutiger Kennung, lässt sich in *id* der Nodelist exa
 
 **relation**
 Beziehungsart zwischen den Knoten
-1=*friends*
-2=*love*
-3=*colleagues*
-4=*member*
-5=*founder*
+1=*Privater Kontakt*
+
+2=*(Ex-)Liebesbeziehung*
+
+3=*Kollegen*
+
+4=*Mitglieder/Teilnehmer*
+
+5=*Gründer*
+
+6=*Angestellte/r*
 
 # NODE-Attribute
 **id**
@@ -45,17 +51,27 @@ Numerische ID.
 
 **type**
 1=*Person*
-2=*gesellschaftlicher Sektor*
+
+2=*Organisation*
 
 **sector**
 1=*Wirtschaft*
+
 2=*Militär*
+
 3=*Politik*
+
 4=*Adel*
+
 5=*Religion*
-6=*Justiz*
-7=*Gesundheitswesen*
-8=*Kultur*
+
+6=*Judikative*
+
+7=*Exekutive*
+
+8=*Gesundheitswesen*
+
+9=*Kultur*
 
 
 
