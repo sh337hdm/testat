@@ -3,7 +3,9 @@ Codebuch Stand 2022-12, erstellt von Sara Hedrich (sh337@hdm-stuttgart.de)
 
 ## Inhalt
 edges.csv (Edgelist)
+
 nodes.csv (Nodelist)
+
 codebuch.md (Codierung der Datensätze)
 
 ## Ursprung und Datenerhebung
