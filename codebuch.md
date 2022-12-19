@@ -65,21 +65,19 @@ Numerische ID.
 
 1=*Wirtschaft*
 
-2=*Militär*
+2=*Politik*
 
-3=*Politik*
+3=*Adel*
 
-4=*Adel*
+4=*Religion*
 
-5=*Religion*
+5=*Judikative*
 
-6=*Judikative*
+6=*Exekutive*
 
-7=*Exekutive*
+7=*Gesundheitswesen*
 
-8=*Gesundheitswesen*
-
-9=*Kultur*
+8=*Kultur*
 
 
 
