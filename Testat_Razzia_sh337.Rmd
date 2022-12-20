@@ -1,0 +1,132 @@
+---
+title: "Testat"
+subtitle: "Reichsbürger Razzia"
+author: "Sara Hedrich sh337"
+date: '2022-05-12'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	message = FALSE,
+	warning = FALSE,
+	include = FALSE)
+library(igraph)
+```
+
+# Testat
+
+## Daten und Codebuch
+
+Die Daten und das Codebuch sind in meinem
+[Github-Account](https://github.com/sh337hdm/testat)
+hinterlegt.
+
+```{r Netzwerk einlesen}
+# Programmbibliothek laden
+library(igraph)
+
+# Einlesen der Edge- und Nodelist
+edges <- read.csv("https://raw.githubusercontent.com/sh337hdm/testat/main/edges.csv", header=T, as.is=T, sep = ",")
+
+nodes <- read.csv("https://raw.githubusercontent.com/sh337hdm/testat/main/nodes.csv", header=T, as.is=T, sep = ",")
+
+# Matrix erstellen
+matrixedges <- as.matrix(edges)
+
+# Zusammenführen von Edge- und Nodelist als igraph-Objekt razzia
+razzia <- graph_from_data_frame(d=matrixedges, vertices=nodes, directed=T)
+razzia
+```
+
+## Datensatz vorbereiten
+
+```{r Netzwerk analysieren, fig.height=6, fig.width=9}
+
+# Einfacher plot
+plot(razzia,
+     asp=0,
+     layout=layout_nicely,
+     vertex.label=V(razzia)$names,
+     vertex.label.color="black",
+     edge.size=5,
+     vertex.size=7,
+     main="Netzwerk zur Reichsbürger Razzia")
+
+# Attribute anzeigen lassen
+list.vertex.attributes(razzia)
+list.edge.attributes(razzia)
+
+# Farben festlegen für die verschiedenen Sektoren
+
+# Farben für Vertex-Attribut "sector" festlegen
+V(razzia)[V(razzia)$sector == 1]$color <- "red"
+V(razzia)[V(razzia)$sector == 2]$color <- "purple"
+V(razzia)[V(razzia)$sector == 3]$color <- "lightblue"
+V(razzia)[V(razzia)$sector == 4]$color <- "blue"
+V(razzia)[V(razzia)$sector == 5]$color <- "green"
+V(razzia)[V(razzia)$sector == 6]$color <- "yellow"
+V(razzia)[V(razzia)$sector == 7]$color <- "pink"
+V(razzia)[V(razzia)$sector == 8]$color <- "orange"
+
+```
+
+## Two-Mode Netzwerk
+
+Ein two-mode Netzwerk besteht aus zwei unterschiedlichen Knotentypen,
+üblicherweise Akteure und Organisationen/Event, die über
+Mitgliedschaften definiert sind.
+
+Wenn in der Nodelist das Attribut "type" mit den Werten 1 und 2 vergeben
+ist, lassen sich zusätzlich zur Farbe auch die Form der Knoten anpassen
+(das ist zusätzlich zu der Aufgabe und wird nicht im Testat verlangt:
+ist aber später für Ihr Projekt hilfreich.
+
+```{r Two-Mode Netzwerk erstellen}
+
+# Vertex-Attribute anzeigen lassen
+list.vertex.attributes(razzia)
+
+# Formen für two-mode Netzwerk festlegen
+V(razzia)[V(razzia)$type == 1]$shape <- "circle" # Person
+V(razzia)[V(razzia)$type == 2]$shape <- "square" # Organisation
+
+```
+
+```{r Two-Mode Netzwerk visualisieren, fig.height=6, fig.width=9}
+
+# Two-Mode Netzwerk mit Farben visualisieren
+
+plot(razzia,
+     asp=0,
+     layout=layout_nicely,
+     rescale=TRUE,
+     vertex.label=V(razzia)$name,
+     vertex.label.color="black",
+     vertex.size=5,
+     vertex.frame.color="black",
+     edge.color="grey60",
+     edge.arrow.size=1,
+     main="Two-Mode Netzwerk der Reichsbürger Razzia",
+     sub="Runde Knoten = Personen
+     Quadratische Knoten = Organisationen")
+
+
+
+
+```
+
+
+## Fragen zum Two-Mode Netzwerk und zum Testat
+1) Wie interpretieren Sie das erstellte Netzwerk? Wieviel Zeit haben Sie dafür benötigt?
+
+Das Netzwerk zeigt deutlich, dass viele der Personen aus ähnlichen bzw. gleichen Organisationen stammen, wie zum Beispiel dem Kommando Streitkräfte. Die Mitglieder wurden vermutlich über schwache Beziehungen am Arbeitsplatz oder in einer Partei rekrutiert. Es gibt dennoch ein Paar isolierte Knoten, die aus anderen Sektoren kommen. 
+Insgesamt habe ich für die Erhebung des Netzwerkes rund 3,5 Stunden benötigt, die meiste Zeit habe ich für die Recherche und Erstellung der Edge- und Nodelist verwendet. 
+
+2) Was war Ihr grösster Lernerfolg der Veranstaltung?
+
+Mein persönlich größter Lernerfolg war die Relevanz von sozialen Netzwerken und vor allem die Stärke der schwachen Beziehungen nach Granovetter. Ich dachte davor, dass schwache Beziehungen nicht so vorteilhaft sein können, wie starke Beziehungen. In dieser Veranstaltung wurde ich aber eines Besseren belehrt und bin froh über diese neue Erkenntnis.
+
+3) Welches Netzwerk möchten Sie gerne selbst untersuchen? Wenn Sie eine Tandem-Abgabe gemacht haben, bitte gerne zwei oder mehr Netzwerk-Ideen einreichen.
+
+Ich würde gerne Jeffrey Epsteins Sex-Trafficking Netzwerk untersuchen, da ich es schockierend finde, wie wenig eigentlich über die Vorfälle bekannt ist und vor allem, wer alles daran beteiligt war. 
